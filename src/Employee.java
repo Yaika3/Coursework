@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 
 public class Employee {
     String name;
@@ -6,15 +6,14 @@ public class Employee {
     String patronymic;
     int department;
     int salary;
-    private int ArrayList;
-    int id = ArrayList;
-    ArrayList<Integer> list = new ArrayList<>();
+    int id;
+
+    private static int counter = 0;
 
 
 
-    public int getArrayList(){
-        return id;
-    }
+
+
 
 
     public Employee (String surname,String name,String patronymic, int department,int salary){
@@ -23,6 +22,11 @@ public class Employee {
         this.patronymic = patronymic;
         this.department = department;
         this.salary = salary;
+        this.id= counter;
+        counter++;
+
+
+
     }
     public String getName(){
         return name;
@@ -38,6 +42,10 @@ public class Employee {
     }
     public int getSalary(){
         return salary;
+    }
+    public  int getCounter(){
+        return counter;
+
     }
 
 
